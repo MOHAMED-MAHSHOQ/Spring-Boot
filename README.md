@@ -1,0 +1,3 @@
+so now we are entering into new section i have provided my mentor github repo and my follow up repo so analyse and also with that i added next section topics so explain as 5 year boy understood and how to implement for our project based on my mentor repo and understand implementation working everything i love diagrammatical learning in good flow 
+
+youre just giving all like i am pro dev i just know everything just go step by step with detailed explanation okay
