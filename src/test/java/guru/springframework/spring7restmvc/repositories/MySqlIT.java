@@ -19,7 +19,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @Testcontainers
 @SpringBootTest
-@ActiveProfiles("localmysql")
 public class MySqlIT {
 
     @Container
