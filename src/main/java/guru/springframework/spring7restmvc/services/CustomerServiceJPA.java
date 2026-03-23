@@ -1,5 +1,6 @@
 package guru.springframework.spring7restmvc.services;
 
+import guru.springframework.spring7restmvc.entities.Customer;
 import guru.springframework.spring7restmvc.mappers.CustomerMapper;
 import guru.springframework.spring7restmvc.model.CustomerDTO;
 import guru.springframework.spring7restmvc.repositories.CustomerRepository;
@@ -31,7 +32,13 @@ public class CustomerServiceJPA implements CustomerService {
     }
 
     @Override
-    public List<CustomerDTO> getAllCustomers() {
+    public List<CustomerDTO> getAllCustomers(String name) {
+        if(name != null){
+          return customerRepository.findAllByName(name).stream()
+                  .map(customerMapper::customerToCustomerDto)
+                  .toList();
+
+        }
         return customerRepository.findAll().stream()
                 .map(customerMapper::customerToCustomerDto)
                 .collect(Collectors.toList());
